@@ -1,16 +1,34 @@
- let capvidbtn = document.querySelector('.capture-button');
+
  let sshot = document.querySelector('.screenshot-button');
  let img = document.querySelector('img');
  let vid = document.querySelector('#vid');
  let canva = document.querySelector('canvas');
-
+ let gray = document.querySelector('#gray');
+ let noSt = document.querySelector('#noSt');
+ let cntex = document.querySelector('#cntrst');
+ let bright = document.querySelector('#bright');
 
 // if the user click the capture btn
-capvidbtn.onclick = function(){
+window.onload = function(){
     navigator.mediaDevices.getUserMedia({video: true}).then(stream =>{
         vid.srcObject = stream;
     }).catch (err => {console.log(err)})
 };
+
+noSt.onclick = function(){
+    vid.style.cssText = "filter: ;";
+};
+gray.onclick = function(){
+    vid.style.cssText = "filter: grayscale(1) contrast(1.5);";
+};
+cntex.onclick = function(){
+    vid.style.cssText = "filter: contrast(2.5);";
+};
+bright.onclick = function(){
+    vid.style.cssText = "filter: brightness(1.5);";
+};
+
+
 
 // if i click the screenshot button
 sshot.onclick = function(){
@@ -31,4 +49,5 @@ sshot.onclick = function(){
     hrefelem.download = `screenshotelement$.png`;
     hrefelem.click();
     hrefelem.remove();
+    img.remove();
 };

@@ -23,6 +23,11 @@ a{
     height: 100%;
 }
 /* main area css */
+#vid{
+	width: 100%;
+	filter: blur(1px);
+	-webkit-filter: blur(1px);
+}
 .controler{
 }
 .bdrs{
@@ -69,4 +74,13 @@ a{
 }
 .pcr-button {
 	border: 1px solid #ddd;
+}
+#filter_palet button {
+    width: 116px;
+    height: 71px;
+    text-transform: capitalize;
+    margin-bottom: 17px;
+}
+div#filter_palet {
+    text-align: center;
 }

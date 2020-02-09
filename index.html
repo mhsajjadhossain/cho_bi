@@ -14,17 +14,22 @@
 <body>
     
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <h2>Video Stream</h2>
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2>Machine Camero</h2>
                 <video id="vid" autoplay></video>
                 <img src="" alt="">
                 <canvas style="display: none;"></canvas>
             </div>
-            <div class="col-lg-4 mt-5">
-                <div id="screenshot">
-                    <button class="capture-button btn btn-primary">Capture</button>
-                    <button class="screenshot-button btn btn-success">Screenshot</button>
+            <div class="col-lg-8 mt-2">
+                <div id="filter_palet">
+                    <button id="noSt">None</button>
+                    <button id="gray">Black & White</button>
+                    <button id="cntrst">contrast</button>
+                    <button id="bright">Bright</button>
+                </div>
+                <div id="screenshot" class="text-center">
+                    <button class="screenshot-button btn btn-success">Capture Image</button>
                 </div>
             </div>
         </div>
@@ -41,7 +46,7 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/pickr.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="js/script.min.js"></script>
 </body>
 
 </html>
